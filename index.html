@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="/js/vue.min.js"></script>
+
+</head>
+<body id="app">
+
+    <section v-if="spinner" class="w-100 h-100 position-fixed top-0 start-0 z-3 d-flex justify-content-center align-items-center bg-light">
+        <span class="spinner-grow spinner-grow-sm"></span>
+    </section>
+    <navbar></navbar>
+    <hero-section></hero-section>
+    <hr class="container my-5">
+    <majors-section></majors-section>
+    <hr class="container my-5">
+    <partners-section></partners-section>
+    <hr class="container my-5">
+    <faq-section></faq-section>
+    <contact-section></contact-section>
+
+    <script type="module" src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<section id="about" class="container my-5">
+    <div class="row g-3 justify-content-between">
+        <div class="col-12 col-lg-6">
+            <section class="d-flex flex-column gap-3">
+                <div class="d-flex gap-3 align-items-center flex-wrap">
+                    
+                    <!-- <img src="/favicon.ico" alt="" width="100" class="img-fluid rounded-circle"> -->
+                    <h1>Your Bridge to Global Education and Personal Growth Journey</h1>
+                </div>
+                <p class="text-secondary">Bayan International Group for University Services and Training is a Lebanese organization dedicated to university-related matters. It serves as a representative for multiple Arab and foreign universities, aiming to streamline the admission process for students aspiring to pursue education across different academic tiers (Bachelor's, Master's, Doctorate).</p>
+                <p class="text-secondary">The organization extends academic and administrative assistance to these students. Furthermore, it actively engages in diverse training initiatives encompassing areas such as administration, industry, and personal development.</p>
+
+                <div class="d-flex gap-2 flex-wrap align-items-center">
+                    <a v-for="l in store.profile.links" :key="l" :href="l.url" class="no-decoration d-flex align-items-center gap-1 px-3 py-1 bg-light rounded-pill shadow-sm">
+                        <span class="material-symbols-outlined text-primary">link</span>
+                        <!-- <i class="bi bi-link text-primary"></i> -->
+                        <span class="text-secondary">{{l.text}}</span>
+                    </a>
+                </div>
+                
+            </section>
+        </div>
+        <div class="col-12 col-lg-5">
+            <figure class="w-100">
+                
+                <swiper-container id="heroSwiper" :init="heroSwiper">
+                    <div class="swiper-slide" v-for="s in store.profile.slides" :key="s">
+                        <div class="ratio ratio-16x9"><img :src="s.thumbnail" :alt="'bayan-' + s.index" class="img-fluid rounded skeleton"></div>
+                    </div>
+                </swiper-container>
+            </figure>
+        </div>
+    </div>
+</section>

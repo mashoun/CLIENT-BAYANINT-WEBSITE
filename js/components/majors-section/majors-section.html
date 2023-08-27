@@ -1,0 +1,10 @@
+<section id="majors" class="container">
+    <div class="row g-4">
+        <div class="col-12"> <tagline title="Check our Majors">Explore Limitless Learning Paths with Our Diverse Array of Academic Opportunities. Unlock Your Potential Today!</tagline> </div>
+        <div class="col-12">
+            <swiper-container id="courses-swiper" :init="coursesSwiper">
+                <div class="swiper-slide" v-for="c in store.profile.majors" :key="c"> <pot :data="c"></pot> </div>
+            </swiper-container>
+        </div>
+    </div>
+</section>

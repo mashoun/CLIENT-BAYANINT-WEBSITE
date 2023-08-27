@@ -1,0 +1,30 @@
+<section class="container mb-5">
+    <div class="row g-4">
+        <div class="col-12">
+            <tagline title="Frequently asked questions">
+                Your Queries, Our Answers: Navigating Curiosities Through Comprehensive Insights and Clarifications for a Smooth Journey.
+            </tagline>
+        </div>
+        <div class="col-12 col-lg-6"  v-for="f in store.profile.faq" :key="f">
+            <div class="d-flex align-items-center gap-2 bg-light shadow-sm rounded p-2" data-bs-toggle="modal" :data-bs-target="'#faq-modal'+f.index" >
+                <span class="material-symbols-outlined text-secondary"> help </span>
+                <span class="text-fade text-primary">{{f.question}}</span>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" :id="'faq-modal' + f.index" tabindex="-1" aria-labelledby="faq-modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-fade" id="faq-modalLabel">{{f.question}}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            {{f.answer}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>

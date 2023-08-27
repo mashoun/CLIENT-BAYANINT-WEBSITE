@@ -1,0 +1,14 @@
+<section class="container">
+    <div class="row g-4">
+        <div class="col-12">
+            <tagline title="Our Partners">The Collaborators Who Elevate Our Vision and Multiply Achievements Beyond Boundaries.</tagline>
+        </div>
+        <div class="col-12">
+            <swiper-container id="partners-swiper" :init="partnersSwiper">
+                <div class="swiper-slide" v-for="p in store.profile.partners" :key="p">
+                    <div class="ratio ratio-1x1"><img :src="p.thumbnail" alt="logo" class="img-fluid object-fit-cover rounded shadow-sm"></div>
+                </div>
+            </swiper-container>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,8 @@
+<section class="p-3 bg-light rounded d-flex flex-column gap-2 shadow-sm ">
+    <div class="ratio ratio-16x9"> <img :src="data.thumbnail" :alt="data.title" class="skeleton img-fluid object-fit-cover rounded-top"> </div>
+    
+    <h5 class="text-primary text-fade">{{data.title}}</h5>
+    <p class="text-fade-3 text-secondary fs-small"> {{data.description}} </p>
+    <a :href="data.url" class="btn btn-outline-primary btn-sm">Learn more</a>
+
+</section>
